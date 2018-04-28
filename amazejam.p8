@@ -129,7 +129,7 @@ function _draw()
   
   -- title
   if level == 5 then
-    print("the road of dreams", 32, 96)
+    print("the road to dreams", 32, 96)
   end
   
   -- pond
