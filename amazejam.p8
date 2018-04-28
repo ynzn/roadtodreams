@@ -97,20 +97,20 @@ function _draw()
   cls()
   
   -- floor
-  if level > 0 then
+  if level >-1 then
    for i=0,15 do
      spr(17, i*8, 72)
    end
   end
   
   -- moon
-  if level>2 then
+  if level>1 then
     circfill(moon[1],moon[3],16,7)
     circfill(moon[1]+moon[2],moon[3],16,0)
   end
   
   -- stars
-  if level>1 then
+  if level>0 then
     for star in all(stars) do
       pset(star[1],star[2],7)
     end
@@ -120,7 +120,7 @@ function _draw()
   spr(1,player.x,player.y)
   
   -- trees
-  if level>3 then
+  if level>2 then
     for tree in all(trees) do
       for l=1,#tree.t do
         spr(tree.t[l]+3,tree.x,72-8*l)
@@ -134,7 +134,7 @@ function _draw()
   end
   
   -- people
-  if level > 7 then
+  if level > 6 then
    for p in all(people) do
      pal(7,p.c1)
      spr(32, p.x, 64)
@@ -146,19 +146,19 @@ function _draw()
   end  
   
   -- herbs
-  if level > 0 then
+  if level > -1 then
    for i in all(herbs) do
      spr(16, i*8, 64)
    end
   end
      
   -- title
-  if level == 6 then
+  if level == 5 then
     print("the road to dreams", 32, 96)
   end
   
   -- pond
-  if level>4 then
+  if level>3 then
     clip(0,80,128,48)
     for c in all(pond) do
       circ(c.x,c.y,c.r,1)
